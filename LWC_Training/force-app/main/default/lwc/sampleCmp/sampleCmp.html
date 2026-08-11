@@ -1,0 +1,11 @@
+<template>
+    <div>
+       <div>Hello {greetCmp}</div>
+        <div>
+            <lightning-input label="Enter message" 
+               type="text" value={greetCmp} onchange={handleMessage}>
+            </lightning-input>
+            <lightning-button label="update" onclick={handleMessageChange}></lightning-button>
+        </div>
+    </div>
+</template>     
