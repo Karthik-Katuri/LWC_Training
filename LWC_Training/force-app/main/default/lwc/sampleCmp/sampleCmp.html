@@ -1,11 +1,48 @@
 <template>
-    <div>
-       <div>Hello {greetCmp}</div>
+    <!--component body start-->
+      <div>
+        <!--section 1-->
+    <template lwc:if={showWelcomeMessage}>  
+       <div>Hello world {greetCmp}</div>
+       <br/>
         <div>
             <lightning-input label="Enter message" 
                type="text" value={greetCmp} onchange={handleMessage}>
             </lightning-input>
             <lightning-button label="update" onclick={handleMessageChange}></lightning-button>
         </div>
+        </template>
+
+        <!--section 1-->
+
+        <!--section 2-->
+        <template lwc:elseif={showSecondMessage}>    
+       <div>Hello all {greetCmp}</div>
+       <br/>
+        <div>
+            <lightning-input label="Enter message" 
+               type="text" value={greetCmp} onchange={handleMessage}>
+            </lightning-input>
+            <lightning-button label="update" onclick={handleMessageChange}></lightning-button>
+        </div>
+        </template>
+        <!--section 2-->
+
+        <!--section 3-->
+        <template lwc:else>
+       <div>Hello indian {greetCmp}</div>
+       <br/>
+        <div>
+            <lightning-input label="Enter message" 
+               type="text" value={greetCmp} onchange={handleMessage}>
+            </lightning-input>
+            <lightning-button label="update" onclick={handleMessageChange}></lightning-button>
+        </div>
+        </template>
+        <!--section 3-->
+    <lightning-button label="next" onclick={handleNext}></lightning-button>
+    <lightning-button label="final" onclick={handleFinal}></lightning-button>
     </div>
+
+     <!--component body end-->
 </template>     
