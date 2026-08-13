@@ -11,9 +11,21 @@
             </lightning-input>
             <lightning-button label="update" onclick={handleMessageChange}></lightning-button>
         </div>
+        <!--student list-->
+        <ul>
+            <template for:each={studentsList} for:item="student">
+                <li key={student.rollno}>
+                 "name":   {student.name}  "age": {student.age}  "grade": {student.grade}
+                </li>
+            </template>
+        </ul>   
         </template>
-
         <!--section 1-->
+        
+        
+        
+         
+        
 
         <!--section 2-->
         <template lwc:elseif={showSecondMessage}>    
