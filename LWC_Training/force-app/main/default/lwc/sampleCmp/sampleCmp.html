@@ -3,7 +3,7 @@
       <div>
         <!--section 1-->
     <template lwc:if={showWelcomeMessage}>  
-       <div>Hello world {greetCmp}</div>
+       <div class = "slds-box">Hello world {greetCmp}</div>
        <br/>
         <div>
             <lightning-input label="Enter message" 
@@ -19,6 +19,7 @@
                 </li>
             </template>
         </ul>   
+        <lightning-button label="Add Student" onclick={handleAddStudent}></lightning-button>
         </template>
         <!--section 1-->
         
@@ -29,7 +30,7 @@
 
         <!--section 2-->
         <template lwc:elseif={showSecondMessage}>    
-       <div>Hello all {greetCmp}</div>
+       <div class ="custom-class">Hello all {greetCmp}</div>
        <br/>
         <div>
             <lightning-input label="Enter message" 
@@ -53,6 +54,7 @@
         </template>
         <!--section 3-->
     <lightning-button label="next" onclick={handleNext}></lightning-button>
+    <div>&nbsp;</div>
     <lightning-button label="final" onclick={handleFinal}></lightning-button>
     </div>
 
