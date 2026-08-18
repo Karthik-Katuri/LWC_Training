@@ -3,8 +3,10 @@
       <div>
         <!--section 1-->
     <template lwc:if={showWelcomeMessage}>  
-       <div class = "slds-box">Hello world {greetCmp}</div>
-       <br/>
+      <!-- <div class = "slds-box">Hello world {greetCmp}</div>-->
+      <c-sample-child-cmp greet-cmp = {greetCmp}></c-sample-child-cmp> 
+      <br/>
+
         <div>
             <lightning-input label="Enter message" 
                type="text" value={greetCmp} onchange={handleMessage}>
@@ -43,10 +45,10 @@
 
         <!--section 3-->
         <template lwc:else>
-       <div>Hello indian {greetCmp}</div>
+       <div style="border: 1px solid gray; width: 100%;">Hello indian {greetCmp}</div>
        <br/>
         <div>
-            <lightning-input label="Enter message" 
+            <lightning-input  label="Enter message" 
                type="text" value={greetCmp} onchange={handleMessage}>
             </lightning-input>
             <lightning-button label="update" onclick={handleMessageChange}></lightning-button>
