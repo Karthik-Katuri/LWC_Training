@@ -1,7 +1,7 @@
 import { LightningElement,track } from 'lwc';
 
 export default class SampleCmp extends LightningElement {
-    greetCmp = "LWC";
+    greetCmp = "world";
     showWelcomeMessage = true;
     showSecondMessage = false;
 
@@ -31,5 +31,9 @@ export default class SampleCmp extends LightningElement {
     handleAddStudent(){
         this.studentsList.push({"name":"Carol","rollno":6,"age":23,"grade":"C"});
         
+    }
+    handleChangeMessage(event){
+       const childCmp = this.template.querySelector('c-sample-child-cmp');
+       childCmp.changeMessage("reset message from parent component");
     }
 }

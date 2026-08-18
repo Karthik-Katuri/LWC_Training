@@ -4,14 +4,15 @@
         <!--section 1-->
     <template lwc:if={showWelcomeMessage}>  
       <!-- <div class = "slds-box">Hello world {greetCmp}</div>-->
-      <c-sample-child-cmp greet-cmp = {greetCmp}></c-sample-child-cmp> 
+      <c-sample-child-cmp greet-cmp={greetCmp}></c-sample-child-cmp> 
+    <br/>
       <br/>
 
         <div>
             <lightning-input label="Enter message" 
                type="text" value={greetCmp} onchange={handleMessage}>
             </lightning-input>
-            <lightning-button label="update" onclick={handleMessageChange}></lightning-button>
+            <lightning-button label="update" onclick={handleChangeMessage}></lightning-button>
         </div>
         <!--student list-->
         <ul>
