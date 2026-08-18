@@ -1,5 +1,10 @@
 <template>
     <div>
     <div class = "slds-box">Hello {displayMessage}</div>
-        </div>
+    default slot:
+    <div><slot></slot></div>
+    newSlot:
+    <div><slot name="newSlot"></slot></div>        
+</div>
+
 </template>

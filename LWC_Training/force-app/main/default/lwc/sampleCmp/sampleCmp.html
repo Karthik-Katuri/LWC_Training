@@ -4,8 +4,19 @@
         <!--section 1-->
     <template lwc:if={showWelcomeMessage}>  
       <!-- <div class = "slds-box">Hello world {greetCmp}</div>-->
-      <c-sample-child-cmp greet-cmp={greetCmp}></c-sample-child-cmp> 
-    <br/>
+      <c-sample-child-cmp class="sample-class-name" greet-cmp={greetCmp}></c-sample-child-cmp>
+      <div > This is a slot for student list</div>
+      <div slot="newSlot">This is new slot
+         <ul>
+            <template for:each={studentsList} for:item="student">
+                <li key={student.rollno}>
+                 "name":   {student.name}  "age": {student.age}  "grade": {student.grade}
+                </li>
+            </template>
+        </ul>  
+      </div>
+        
+      
       <br/>
 
         <div>

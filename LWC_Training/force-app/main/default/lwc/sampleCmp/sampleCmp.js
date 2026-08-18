@@ -33,7 +33,7 @@ export default class SampleCmp extends LightningElement {
         
     }
     handleChangeMessage(event){
-       const childCmp = this.template.querySelector('c-sample-child-cmp');
+       const childCmp = this.template.querySelector('.sample-class-name');
        childCmp.changeMessage("reset message from parent component");
     }
 }
