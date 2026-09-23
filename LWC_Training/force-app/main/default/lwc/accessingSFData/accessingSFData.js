@@ -4,10 +4,12 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 export default class AccessingSFData extends LightningElement {
     fields = ['Name', 'Phone', 'Website', 'Industry', 'Type'];
     isTypeChanged = false;
+    accountId = "";
 
     handleSuccess(event) {
         const updatedRecordId = event.detail.id;
         console.log('Record updated successfully. Record ID: ' + updatedRecordId);
+        this.accountId = updatedRecordId;
 
         const updateToast = new ShowToastEvent({
             title: 'Success',

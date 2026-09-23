@@ -14,6 +14,22 @@
             </lightning-card>
     </div>
            -->
+    <div class=" slds-box">
+        <lightning-record-view-form
+        record-id={accountId}
+        object-api-name="Account"
+        >
+        <div>
+            <lightning-output-field field-name="Name"></lightning-output-field>
+            <lightning-output-field field-name="Phone"></lightning-output-field>
+            <lightning-output-field field-name="Website"></lightning-output-field>
+            <lightning-output-field field-name="Industry"></lightning-output-field>
+            <lightning-output-field field-name="Type"></lightning-output-field>
+        </div>
+
+        </lightning-record-view-form>
+
+    </div>
             <lightning-record-edit-form
               record-id=""
               object-api-name="Account"
