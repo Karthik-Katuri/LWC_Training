@@ -1,7 +1,7 @@
 <template>
     <!--*************component body*************-->
     <div>
-        <lightning-card title="Accessing Salesforce Data" icon-name="standard:account">
+       <!-- <lightning-card title="Accessing Salesforce Data" icon-name="standard:account">
             <div class="slds-border_top slds-border-around-small slds-p-around_small">
             <lightning-record-form record-id="001fj00001ZHykhAAD"
             object-api-name="Account"
@@ -11,9 +11,41 @@
             columns="2">
 
             </lightning-record-form>
-           
-            </div>
-        </lightning-card>
+            </lightning-card>
     </div>
+           -->
+            <lightning-record-edit-form
+              record-id=""
+              object-api-name="Account"
+              onsuccess={handleSuccess}
+            >
+            <div>
+                <lightning-input-field field-name="Name"></lightning-input-field>
+                <lightning-input-field field-name="Phone"></lightning-input-field>
+                <lightning-input-field field-name="Website"></lightning-input-field>
+                <lightning-input-field field-name="Industry"></lightning-input-field>
+                <lightning-input-field field-name="Type"
+                onchange={handleAccountChangeType}></lightning-input-field>
+                
+            </div>
+            <template lwc:if={isTypeChanged}>
+                    <div>
+                        <lightning-input-field field-name="AccountNumber"></lightning-input-field>
+                
+                    </div>
+                </template>
+
+            <div>
+                <lightning-button
+                 class="slds-m-top_small"
+                  variant="brand"
+                   type="submit" 
+                   name="update"
+                    label="Update"></lightning-button>
+            </div>
+              
+            </lightning-record-edit-form>
+            </div>
+     
     <!--*************component body*************-->
 </template>
